@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Klavika';
+  src: url('./fontes/klavika-medium.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Klavika';
+  src: url('./fontes/klavika-bold.otf') format('opentype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Klavika';
+  src: url('./fontes/klavika-light-italic.otf') format('opentype');
+  font-weight: 200; 
+  font-style: italic;
+}
+
+body, *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Klavika', sans-serif;
+}
+
+#WhatsApp-logo{
+  position: fixed;
+  right: 10px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: .3s;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}

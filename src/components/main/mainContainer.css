@@ -1,0 +1,35 @@
+#sejaDesktop-container{
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h1{
+        display: flex;
+        font-size: 36px;
+        font-weight: 600;
+        gap: 10px;
+    }
+
+    p{
+    font-size: 16px;
+    color: #333333;
+}
+}
+
+#sejaDesktop-container{
+    color: #EBAE00;
+}
+
+#desktop-word{
+    color: #9D2926;
+}
+
+#whatsapp-word{
+    color: #4CAE4F;
+    cursor: pointer;
+}
+
+.destaque-word{
+    color: #9D2926;
+}

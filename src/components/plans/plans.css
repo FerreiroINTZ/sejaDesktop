@@ -1,0 +1,135 @@
+#plans-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 26px 0px;
+    padding: 15px 0px 51px 0px;
+    background: #9D2926;
+    height: fit-content;
+
+    h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #nossos-word{
+            font-size: 26px;
+            color: white;
+        }
+
+        #planos-word{
+            font-size: 38px;
+            color: #EBAE00;
+        }
+    }
+
+    #cards{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 15px;
+    height: 320px;
+    background: white;
+    border-radius: 5px;
+
+    .no-buttons-plans{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .banda{
+            font-size: 32px;
+            color: #EBAE00;
+        }
+        
+        .preco{
+            display: flex;
+            flex-direction: column;
+            color: #333333;
+            position: relative;
+            
+            .preco-antigo{
+                position: absolute;
+                left: -15px;
+                font-style: italic;
+                font-weight: 200;
+                text-decoration: line-through;
+                font-size: 12px;
+            }
+    
+            .preco-novo{
+                margin: 10px 0px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    
+    
+        .line{
+            width: 100%;
+            height: 3px;
+            background: #9A9A9A;
+        }
+    
+        .motivos-banda{
+            margin: 15px 18px;
+            font-size: 12px;
+            align-self: flex-start;
+        }
+    }
+
+    .buttons-plans{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin: 0px 0px 20px 0px;
+
+        .search-disponibility{
+            position: relative;
+            border: none;
+            background: none;
+            color: #9D2926;
+            cursor: pointer;
+            
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: 2px;
+                background: #9D2926;
+                transition: .5s;
+            }
+
+            &:hover:after{
+                width: 100%;
+            }
+        }
+    
+    
+        .contratar-button{
+            background: #EBAE00;
+            border: none;
+            width: 100%;
+            height: 28px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333333;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
