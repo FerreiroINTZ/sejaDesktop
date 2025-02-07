@@ -1,0 +1,20 @@
+#motivos-container{
+    gap: 35px;
+    margin-top:  50px;
+}
+
+.motivos{
+    position: relative;
+    padding: 10px;
+    background: hsl(0, 0%, 85%);
+
+    &:after{
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #989898;
+    }
+}
