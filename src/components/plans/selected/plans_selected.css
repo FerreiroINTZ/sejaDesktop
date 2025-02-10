@@ -20,13 +20,13 @@
         border: 3px solid red;
         border-radius: 5px;
         color: white;
-        padding: 15px;
+        padding: 20px 15px;
 
         h3{
             font-size: 48px;
             color: #FFBD00;
             text-decoration: underline;
-            /* margin: 10px 0px 20px 0px; */
+            margin-bottom: 15px;
         }
 
         #prices-selectde_card-container{
@@ -49,6 +49,8 @@
         }
         
         #search-disponibility-word{
+            text-align: center;
+            font-size: 18px;
             margin-bottom: 15px;
         }
         
@@ -78,12 +80,23 @@
             flex-direction: column;
             gap: 10px;
 
+            
             .inputs-plans-selecteds{
                 background: #D9D9D9;
                 color: #333333;
-
+                
                 input{
                     color: #9D2926;
+                }
+
+            }
+
+            #dt-nasc{
+                display: flex;
+                justify-content: space-between;
+
+                input{
+                    flex-grow: 0;
                 }
             }
         }
@@ -98,7 +111,7 @@
             width: 100%;
             background: #EBAE00;
             font-size: 18px;
-            padding: 10px;
+            align-self: flex-end;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/header/header'
 import Main from './components/main/mainContainer'
 import  whatsapp_logo from './imgs/WhatsApp.svg.webp'
@@ -10,7 +10,16 @@ import Plans_selected from './components/plans/selected/plan_selected.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [plans_selected, setPlans_selected] = useState(true)
+  const [plans_selected, setPlans_selected] = useState(false)
+
+  useEffect(() =>{
+    if(plans_selected){
+      document.body.style.overflow = 'hidden'
+      window.scrollTo(0, 0)
+    }else{
+      document.body.style.overflow = 'auto'
+    }
+  }, [plans_selected])
 
   return (
     <>

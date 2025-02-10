@@ -22,13 +22,13 @@ function plan_selected({changeFocus}) {
                         <label htmlFor="name" className="name">Nome:</label>
                         <input type="text" id="name"/>
                     </div>
-                    <div id="input-name" className='inputs-plans-selecteds'>
+                    <div id="dt-nasc" className='inputs-plans-selecteds'>
                         <label htmlFor="dt_nasc" className="dt_nasc">Nascimento:</label>
-                        <input type="text" id="dt_nasc"/>
+                        <input type="date" id="dt_nasc"/>
                     </div>
                     <div id="input-name" className='inputs-plans-selecteds'>
                         <label htmlFor="CPF" className="CPF">CPF:</label>
-                        <input type="date" id="CPF"/>
+                        <input type="number" id="CPF"/>
                     </div>
                     <div id="input-name" className='inputs-plans-selecteds'>
                         <label htmlFor="whatsapp" className="whatsapp">Whatsapp:</label>
