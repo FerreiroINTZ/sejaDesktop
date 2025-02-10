@@ -1,7 +1,7 @@
 import React from 'react'
 import './plans.css'
 
-function plans() {
+function plans({changeFocus}) {
   return (
     <section id="plans-container">
         <h2>
@@ -28,10 +28,10 @@ function plans() {
                     </ul>
                 </div>
                 <div className="buttons-plans">
-                    <button className='search-disponibility'>
+                    <button className='search-disponibility' onClick={() => changeFocus(true)}>
                         Consultar disponibilidade
                     </button>
-                    <button className='contratar-button'>Contratar</button>
+                    <button className='contratar-button' onClick={() => changeFocus(true)}>Contratar</button>
                 </div>
             </div>
         </div>

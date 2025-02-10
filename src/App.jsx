@@ -6,15 +6,17 @@ import Plans from './components/plans/plans'
 import Motivos from './components/motivos/motivos'
 import Perguntas from './components/perguntas/perguntas'
 import RodaPe from './components/RodaPe/RodaPe.jsx'
+import Plans_selected from './components/plans/selected/plan_selected.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [plans_selected, setPlans_selected] = useState(true)
 
   return (
     <>
       <Header />
       <Main />
-      <Plans />
+      <Plans changeFocus={setPlans_selected}/>
       <Motivos  />
       <Perguntas />
       <RodaPe />
@@ -22,6 +24,10 @@ function App() {
       <div id="WhatsApp-logo">
         <img src={whatsapp_logo} alt="logo do whatsapp" />
       </div>
+
+      {plans_selected 
+        ? <Plans_selected changeFocus={setPlans_selected}/>  
+        : ''}
     </>
   )
 }

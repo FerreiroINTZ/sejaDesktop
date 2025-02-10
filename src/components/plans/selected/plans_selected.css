@@ -1,0 +1,110 @@
+#plans_selected-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    animation: apearing .5s forwards;
+    opacity: 0; 
+
+    #plans_selected-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 530px;
+        background: #333333;
+        border: 3px solid red;
+        border-radius: 5px;
+        color: white;
+        padding: 15px;
+
+        h3{
+            font-size: 48px;
+            color: #FFBD00;
+            text-decoration: underline;
+            /* margin: 10px 0px 20px 0px; */
+        }
+
+        #prices-selectde_card-container{
+            margin-bottom: 20px;
+
+            #first-price{
+                margin: 0px -20px;
+                font-size: 14px;
+            }
+
+            #last-price{
+                font-size: 24px;
+            }
+            
+        }
+        
+        #search_disponibility-container{
+            /* background: blue; */
+            width: 100%;
+        }
+        
+        #search-disponibility-word{
+            margin-bottom: 15px;
+        }
+        
+        .inputs-plans-selecteds{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            height: 30px;
+            background: #DF4F4B;
+            border-radius: 5px;
+            padding: 0px 5px;
+
+            input{
+                font-size: 18px;
+                flex-grow: 1;
+                background: none;
+                border: none;
+                color: white;
+                outline: none;
+            }
+
+        }
+
+        .others-inputs{
+            margin: 30px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .inputs-plans-selecteds{
+                background: #D9D9D9;
+                color: #333333;
+
+                input{
+                    color: #9D2926;
+                }
+            }
+        }
+
+        #send-inputs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            background: #EBAE00;
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+}
+
+@keyframes apearing {
+    to{
+        opacity: 1;
+    }
+}
