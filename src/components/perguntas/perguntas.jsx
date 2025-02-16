@@ -9,10 +9,14 @@ function perguntas() {
       {
         [...Array(6).keys()].map((i, index) =>
           <> 
-          <input type="radio" hidden name="perguntas" id={("pergunta", index)} />
+          <input type="checkbox" hidden name="perguntas" id={("pergunta", index)} />
+          
           <label htmlFor={("pergunta", index)} className='questions-container'>
-            <h2>Pergunta {i + 1}</h2>
-            <div className="img"><img src={dow_arrow} alt="" /></div>
+            <div className="question-header">
+              <h2>Pergunta {i + 1}</h2>
+              <div className="img"><img src={dow_arrow} alt="dow_arrow" /></div>
+            </div>
+            <div className='question-explained'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora, dignissimos officiis, odit voluptas assumenda ut magnam libero, quos dolor sit iste deleniti consectetur. Quis voluptatibus illo dolorum. Recusandae, ipsa!</div>
           </label>
           </>
         )
