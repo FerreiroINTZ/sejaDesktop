@@ -1,39 +1,42 @@
-import React from 'react'
+import React, {useRef, useReducer} from 'react'
 import './plans.css'
+import PlansCards from './plans-cards/plans_cards'
+import arrow from '../../imgs/seta-direita.png'
 
 function plans({changeFocus}) {
+    
+    const carrosel = useRef()
+
+    function changeCarrosel(base){
+        let inputs = carrosel.current.querySelectorAll("input[type='radio']")
+        console.log(inputs)
+        inputs[base].checked = true
+        if(base < 2){
+            return base + 1
+        }else{
+            return base
+        }
+    }
+
+    const [countCarroselState, countCarroselFunction] = useReducer(changeCarrosel, 0)
+
   return (
     <section id="plans-container">
         <h2>
             <span id='nossos-word'>Nosso</span> 
             <span id='planos-word'>Planos</span>
         </h2>
-        <div id='cards'>
-            <div className='card'>
-                <div className="no-buttons-plans">
-                    <h3 className='banda'>
-                        500 mega
-                    </h3>
-                    <div className='preco'>
-                        <span className='preco-antigo'>de: R$87</span>
-                        <span className='preco-novo'>Por: R$46</span>
-                    </div>
-                    <div className='line'></div>
-                    <ul className='motivos-banda'>
-                        <li>Para videos</li>
-                        <li>Jogos Online</li>
-                        <li>Streaming</li>
-                        <li>Redes sociais</li>
-                        <li>Lives ao Vivo</li>
-                    </ul>
-                </div>
-                <div className="buttons-plans">
-                    <button className='search-disponibility' onClick={() => changeFocus(true)}>
-                        Consultar disponibilidade
-                    </button>
-                    <button className='contratar-button' onClick={() => changeFocus(true)}>Contratar</button>
-                </div>
-            </div>
+        <div id="carrosel" ref={carrosel}>
+            {[...Array(3).keys()].map((x, index) =>{
+                return <input type="radio" hidden name="carrosel" id={`carrosel${index + 1}`}/>
+            })}
+
+            {[...Array(3).keys()].map((x, index) =>
+                !index ? <PlansCards nameClass={true}/> : <PlansCards />
+            )}
+
+
+            <div id="seta"><img src={arrow} onClick={() => countCarroselFunction()}/></div>
         </div>
     </section>
   )
