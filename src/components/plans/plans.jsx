@@ -14,7 +14,12 @@ function plans({changeFocus}) {
         if(base < 2){
             return base + 1
         }else{
-            return base
+            [...Array(inputs.length).keys()].forEach((x, index) =>{
+                inputs[index].checked = false
+                console.log("Input: ", index, " Resetado!", inputs[index].checked)
+            })
+            console.log("Inputs resetados")
+            return 0
         }
     }
 

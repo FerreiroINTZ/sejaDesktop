@@ -27,7 +27,7 @@
 #carrosel{
     display: flex;
     position: relative;
-    background: green;
+    /* background: green; */
     gap: 192px;
     width: fit-content;
     margin: 0px 25%;
