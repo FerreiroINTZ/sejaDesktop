@@ -1,7 +1,7 @@
 import React from 'react'
 import './plans_cards.css'
 
-function plans_cards({nameClass}) {
+function plans_cards({nameClass, changeFocus}) {
     console.log("Card is first:", nameClass)
   return (
         <div className={nameClass ? "cards first" : "cards"}>

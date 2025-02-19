@@ -37,7 +37,7 @@ function plans({changeFocus}) {
             })}
 
             {[...Array(3).keys()].map((x, index) =>
-                !index ? <PlansCards nameClass={true}/> : <PlansCards />
+                !index ? <PlansCards nameClass={true} changeFocus={changeFocus}/> : <PlansCards />
             )}
 
 
